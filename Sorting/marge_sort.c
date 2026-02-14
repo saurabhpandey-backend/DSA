@@ -71,4 +71,4 @@ void print(int *a){
 		printf("%d ",a[i]);
 	}
 }
-ss
+
