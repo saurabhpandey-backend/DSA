@@ -12,7 +12,7 @@ int main(){
 	create(a);
 	print(a);
 	div(a,low,high);
-	printf("Here is a Sorted useing with Marge sort Algo\n");
+	printf("\nHere is a Sorted useing with Marge sort Algo\n");
 	print(a);
 }
 
@@ -26,7 +26,7 @@ void div(int *a,int low,int high){
 } 
 
 void marge(int *a,int low,int mid,int high){
-	int i = low, j=mid+1, k=low;
+	int i=low, j=mid+1, k=low;
 	while(i<=mid && j<=high){
 		if(a[i]<a[j]){
 			b[k]=a[i];
