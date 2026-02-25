@@ -9,15 +9,17 @@ struct node *head=NULL,*newnode,*temp;
 void create();
 void traverse();
 void start_ins();
+void ins_start();
 
 int main(){
 	create();
 	traverse();
 	int n;
-	printf("\nwants to insert in Start press 1 ");
+	printf("\n wants to insert \n in Start press '1'\n otherwise '0' :-");
 	scanf("%d",&n);
-	if(n=1){
-		start_ins();	
+	if(n==1){
+//		start_ins();
+		ins_start();	
 		traverse();
 	}
 	else{
@@ -61,6 +63,18 @@ void start_ins(){
 		newnode->next= temp;
 		head = temp = newnode;
 	}
+}
+
+//here i found the second way to insert node in starting node
+
+void ins_start(){
+	temp=head;
+	newnode= (struct node*)malloc(sizeof(struct node));
+	printf("enter the element :- ");
+	scanf("%d",&newnode->info);
+	newnode->next=temp;
+	head=temp= newnode;
+	temp=head;
 }
 
 void traverse(){
