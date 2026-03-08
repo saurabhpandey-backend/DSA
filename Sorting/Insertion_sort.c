@@ -17,7 +17,7 @@ int main(){
 
 void insertion(){
 	int i;
-	for(i=0;i<n;i++){
+	for(i=1;i<n;i++){
 		int temp = a[i];
 		int j = i-1;
 		while(j>=0 && a[j]>temp){
