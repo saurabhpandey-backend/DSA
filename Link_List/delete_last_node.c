@@ -11,6 +11,7 @@ void create();
 void traverse();
 void del_last();
 void last_del();
+void delete_last();
 
 
 int main(){
@@ -23,7 +24,8 @@ int main(){
 	scanf("%d",&n);
 	if(n==1){
 //		del_last();	
-		last_del();
+//		last_del();
+		delete_last();
 		traverse();
 	}
 	else{
