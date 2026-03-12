@@ -12,7 +12,6 @@ struct node *head,*temp,*newnode,*tail;
 void create();
 void traverse();
 void del_loc();
-int count();
 
 int main(){
 	create();
@@ -45,19 +44,11 @@ void create(){
 	}	
 }
 
-void del_loc(){
+void del_loc(){	
 	temp = head;
 	int pos,i=1;
-	int c = count();
 	printf("\nEnter the pos :- ");
 	scanf("%d",&pos);
-	if(pos==1){
-		temp=temp->next;
-		free(head);
-		head=temp;
-		temp->prev=NULL;
-	}
-	else if(pos>1 && pos<c){
 		while(i!=pos){
 			temp=temp->next;
 			i++;
@@ -65,26 +56,9 @@ void del_loc(){
 		temp->prev->next=temp->next;
 		temp->next->prev=temp->prev;
 		free(temp);
-	}
-	else if(pos==c){
-        while(i!=pos){
-            temp=temp->next;
-            i++;
-        }
-        temp->prev->next=NULL;
-        free(temp);
-    }
 }
 
-int count(){
-	temp=head;
-	int n;
-	while(temp!=NULL){
-		temp=temp->next;
-		n++;
-	}
-	return n;
-}
+
 
 void traverse(){
 	temp=head;
